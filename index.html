@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Quote of The Day</h2>
+        <blockquote>“Ideas are cheap. It’s the execution that is all important.” </blockquote>
+        <span> George R.R. Martin</span>
+        <div>
+            <button>New Quote</button>
+            <button><img src="th.jpeg" >Tweet</button>
+        </div>
+    </div>
+    <script>
+        const api_url = 'https://api.quotable.io/random';
+
+        async function getquote(url) {
+            const response = await fetch(url)
+            var data = await response.json();
+            console.log(" data ");
+
+        }
+        getquote(api_url);
+
+    </script>
+    
+</body>
+</html>
